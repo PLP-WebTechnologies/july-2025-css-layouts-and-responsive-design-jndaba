@@ -1,0 +1,96 @@
+/* ==============================
+   Basic Styles
+   ============================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ==============================
+   Flexbox Section
+   ============================== */
+.flex-section {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.box {
+  flex: 1;
+  background: lightblue;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+/* ==============================
+   Grid Section
+   ============================== */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-item {
+  background: lightgreen;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+/* ==============================
+   Responsive Media Queries
+   ============================== */
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  .flex-section {
+    flex-direction: column;
+  }
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+}
